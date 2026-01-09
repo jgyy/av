@@ -3,6 +3,7 @@ add_library(av_world SHARED
     road_network.cpp
     traffic.cpp
     world_loader.cpp
+    world_renderer.cpp
 )
 
 target_include_directories(av_world PUBLIC
@@ -13,6 +14,7 @@ target_include_directories(av_world PUBLIC
 target_link_libraries(av_world PUBLIC
     av_foundation
     av_physics
+    av_rendering
 )
 
 set_target_properties(av_world PROPERTIES
