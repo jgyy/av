@@ -56,3 +56,22 @@ set_target_properties(test_world PROPERTIES
 )
 
 add_test(NAME WorldTests COMMAND test_world)
+
+# LIDAR sensor tests (Phase 4)
+add_executable(test_lidar
+    sensors/test_lidar.cpp
+)
+
+target_link_libraries(test_lidar PRIVATE
+    av_foundation
+    av_physics
+    av_world
+    av_sensors
+)
+
+set_target_properties(test_lidar PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
+add_test(NAME LidarTests COMMAND test_lidar)
