@@ -11,9 +11,14 @@ target_include_directories(av_physics PUBLIC
 
 target_link_libraries(av_physics PUBLIC
     av_foundation
-    Bullet::LinearMath
-    Bullet::BulletDynamics
 )
+
+if(Bullet_FOUND)
+    target_link_libraries(av_physics PUBLIC
+        Bullet::LinearMath
+        Bullet::BulletDynamics
+    )
+endif()
 
 set_target_properties(av_physics PROPERTIES
     CXX_STANDARD 17

@@ -20,15 +20,25 @@ if(CONAN_EXPORTED)
 endif()
 
 # Find packages
-find_package(Bullet REQUIRED HINTS /usr/lib/cmake/bullet /usr/local/lib/cmake/bullet)
+find_package(Bullet QUIET HINTS /usr/lib/cmake/bullet /usr/local/lib/cmake/bullet)
 if(NOT Bullet_FOUND)
     find_package(Bullet QUIET)
 endif()
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
-find_package(spdlog REQUIRED)
-find_package(nlohmann_json REQUIRED)
-find_package(Eigen3 REQUIRED)
+find_package(GLEW QUIET)
+find_package(spdlog QUIET)
+find_package(nlohmann_json QUIET)
+find_package(Eigen3 QUIET)
+
+# If Eigen3 not found via CMake, try system include paths
+if(NOT Eigen3_FOUND)
+    if(EXISTS "/usr/include/eigen3")
+        set(Eigen3_FOUND TRUE)
+        add_library(Eigen3::Eigen INTERFACE IMPORTED)
+        target_include_directories(Eigen3::Eigen INTERFACE /usr/include/eigen3)
+    endif()
+endif()
 
 # Optional: Find Embree for LIDAR (added in later phases)
 find_package(embree QUIET)
@@ -54,19 +64,23 @@ target_link_libraries(av PUBLIC
     av_foundation
 )
 
-# Physics module
-add_subdirectory(src/physics)
-target_link_libraries(av PUBLIC
-    av_physics
-    Bullet::LinearMath
-    Bullet::BulletDynamics
-)
+# Physics module (only if Bullet is found)
+if(Bullet_FOUND)
+    add_subdirectory(src/physics)
+    target_link_libraries(av PUBLIC
+        av_physics
+        Bullet::LinearMath
+        Bullet::BulletDynamics
+    )
+endif()
 
-# World module (depends on physics)
-add_subdirectory(src/world)
-target_link_libraries(av PUBLIC
-    av_world
-)
+# World module (depends on physics, only if physics is enabled)
+if(Bullet_FOUND)
+    add_subdirectory(src/world)
+    target_link_libraries(av PUBLIC
+        av_world
+    )
+endif()
 
 # Sensors module (depends on foundation, physics, world)
 add_subdirectory(src/sensors)
@@ -99,6 +113,9 @@ target_link_libraries(av PUBLIC
     OpenGL::GL
     glfw
 )
+if(GLEW_FOUND)
+    target_link_libraries(av PUBLIC GLEW::GLEW)
+endif()
 
 # Simulation module (depends on all)
 add_subdirectory(src/simulation)
@@ -110,10 +127,16 @@ target_link_libraries(av PUBLIC
 add_executable(av_exe src/main.cpp)
 target_link_libraries(av_exe PRIVATE
     av
-    spdlog::spdlog
-    nlohmann_json::nlohmann_json
-    Eigen3::Eigen
 )
+if(spdlog_FOUND)
+    target_link_libraries(av_exe PRIVATE spdlog::spdlog)
+endif()
+if(nlohmann_json_FOUND)
+    target_link_libraries(av_exe PRIVATE nlohmann_json::nlohmann_json)
+endif()
+if(Eigen3_FOUND)
+    target_link_libraries(av_exe PRIVATE Eigen3::Eigen)
+endif()
 
 set_target_properties(av_exe PROPERTIES
     OUTPUT_NAME av

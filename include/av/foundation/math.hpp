@@ -157,7 +157,9 @@ inline Mat4 scale(const Mat4& mat, const Vec3& scale) {
 }
 
 inline Mat4 rotate(const Mat4& mat, const Quat& rotation) {
-    return mat * rotation.toRotationMatrix().cast<float>().homogeneous();
+    Mat4 rotMat = Mat4::Identity();
+    rotMat.topLeftCorner(3, 3) = rotation.toRotationMatrix().cast<float>();
+    return mat * rotMat;
 }
 
 } // namespace av

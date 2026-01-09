@@ -1,105 +1,59 @@
 #pragma once
 
-#include <spdlog/spdlog.h>
-#include <spdlog/sinks/stdout_color_sinks.h>
-#include <spdlog/sinks/basic_file_sink.h>
 #include <memory>
 #include <string>
+#include <iostream>
+#include <cstdio>
+#include <cstdarg>
 
 namespace av {
 
-// Logging singleton for the entire application
+// Simple logging without external dependencies
 class Logger {
 public:
+    enum Level { TRACE, DEBUG, INFO, WARN, ERROR, CRITICAL };
+
     static void init(const std::string& logFile = "av.log") {
-        if (logger_) {
-            return; // Already initialized
-        }
-
-        try {
-            // Create console sink
-            auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
-            console_sink->set_level(spdlog::level::debug);
-            console_sink->set_pattern("[%H:%M:%S] [%^%l%$] %v");
-
-            // Create file sink
-            auto file_sink = std::make_shared<spdlog::sinks::basic_file_sink_mt>(logFile, true);
-            file_sink->set_level(spdlog::level::debug);
-            file_sink->set_pattern("[%H:%M:%S] [%l] %v");
-
-            // Combine sinks
-            spdlog::sinks_init_list sink_list = {console_sink, file_sink};
-            logger_ = std::make_shared<spdlog::logger>("av", sink_list);
-
-            logger_->set_level(spdlog::level::debug);
-            logger_->flush_on(spdlog::level::err);
-
-            // Register global logger
-            spdlog::register_logger(logger_);
-        } catch (const spdlog::spdlog_ex& ex) {
-            // Fallback: create basic console logger
-            logger_ = spdlog::stdout_color_mt("av");
-            logger_->error("Log initialization failed: {}", ex.what());
-        }
+        // Simple initialization - just enable logging
+        initialized_ = true;
     }
 
-    static void setLevel(spdlog::level::level_enum level) {
-        if (logger_) {
-            logger_->set_level(level);
-        }
-    }
-
-    static std::shared_ptr<spdlog::logger>& get() {
-        if (!logger_) {
-            init();
-        }
-        return logger_;
+    static void setLevel(Level level) {
+        minLevel_ = level;
     }
 
     static void shutdown() {
-        if (logger_) {
-            logger_->flush();
-            spdlog::drop("av");
-            logger_.reset();
+        initialized_ = false;
+    }
+
+    static void log(Level level, const char* format, ...) {
+        if (!initialized_ || level < minLevel_) {
+            return;
         }
-        spdlog::shutdown();
+
+        const char* levelStr[] = {"TRACE", "DEBUG", "INFO", "WARN", "ERROR", "CRITICAL"};
+        std::fprintf(stderr, "[%s] ", levelStr[level]);
+
+        va_list args;
+        va_start(args, format);
+        std::vfprintf(stderr, format, args);
+        va_end(args);
+
+        std::fprintf(stderr, "\n");
+        std::fflush(stderr);
     }
 
 private:
-    static std::shared_ptr<spdlog::logger> logger_;
+    static bool initialized_;
+    static Level minLevel_;
 };
-
-// Inline logging functions
-inline void logTrace(const std::string& message) {
-    Logger::get()->trace(message);
-}
-
-inline void logDebug(const std::string& message) {
-    Logger::get()->debug(message);
-}
-
-inline void logInfo(const std::string& message) {
-    Logger::get()->info(message);
-}
-
-inline void logWarn(const std::string& message) {
-    Logger::get()->warn(message);
-}
-
-inline void logError(const std::string& message) {
-    Logger::get()->error(message);
-}
-
-inline void logCritical(const std::string& message) {
-    Logger::get()->critical(message);
-}
 
 } // namespace av
 
-// Convenient macros
-#define AV_TRACE(msg) av::Logger::get()->trace(msg)
-#define AV_DEBUG(msg) av::Logger::get()->debug(msg)
-#define AV_INFO(msg) av::Logger::get()->info(msg)
-#define AV_WARN(msg) av::Logger::get()->warn(msg)
-#define AV_ERROR(msg) av::Logger::get()->error(msg)
-#define AV_CRITICAL(msg) av::Logger::get()->critical(msg)
+// Convenient macros with variadic arguments
+#define AV_TRACE(...) av::Logger::log(av::Logger::TRACE, __VA_ARGS__)
+#define AV_DEBUG(...) av::Logger::log(av::Logger::DEBUG, __VA_ARGS__)
+#define AV_INFO(...) av::Logger::log(av::Logger::INFO, __VA_ARGS__)
+#define AV_WARN(...) av::Logger::log(av::Logger::WARN, __VA_ARGS__)
+#define AV_ERROR(...) av::Logger::log(av::Logger::ERROR, __VA_ARGS__)
+#define AV_CRITICAL(...) av::Logger::log(av::Logger::CRITICAL, __VA_ARGS__)

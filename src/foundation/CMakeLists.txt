@@ -5,11 +5,15 @@ target_include_directories(av_foundation INTERFACE
     $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(av_foundation INTERFACE
-    Eigen3::Eigen
-    spdlog::spdlog
-    nlohmann_json::nlohmann_json
-)
+if(Eigen3_FOUND)
+    target_link_libraries(av_foundation INTERFACE Eigen3::Eigen)
+endif()
+if(spdlog_FOUND)
+    target_link_libraries(av_foundation INTERFACE spdlog::spdlog)
+endif()
+if(nlohmann_json_FOUND)
+    target_link_libraries(av_foundation INTERFACE nlohmann_json::nlohmann_json)
+endif()
 
 set_target_properties(av_foundation PROPERTIES
     LINKER_LANGUAGE CXX

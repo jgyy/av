@@ -81,7 +81,8 @@ public:
 
     // Get 4x4 transformation matrix
     Mat4 getMatrix() const {
-        Mat4 mat = rotation_.toRotationMatrix().homogeneous().cast<float>();
+        Mat4 mat = Mat4::Identity();
+        mat.topLeftCorner(3, 3) = rotation_.toRotationMatrix().cast<float>();
         // Apply scale
         mat(0, 0) *= scale_.x();
         mat(1, 0) *= scale_.x();

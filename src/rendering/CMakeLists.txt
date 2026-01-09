@@ -13,10 +13,13 @@ target_include_directories(av_rendering PUBLIC
 
 target_link_libraries(av_rendering PUBLIC
     av_foundation
-    av_physics
     OpenGL::GL
     glfw
 )
+
+if(GLEW_FOUND)
+    target_link_libraries(av_rendering PUBLIC GLEW::GLEW)
+endif()
 
 set_target_properties(av_rendering PROPERTIES
     CXX_STANDARD 17

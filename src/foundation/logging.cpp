@@ -2,7 +2,8 @@
 
 namespace av {
 
-// Instantiate static member
-std::shared_ptr<spdlog::logger> Logger::logger_ = nullptr;
+// Instantiate static members
+bool Logger::initialized_ = true;  // Enabled by default
+Logger::Level Logger::minLevel_ = Logger::DEBUG;
 
 } // namespace av
