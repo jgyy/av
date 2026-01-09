@@ -1,17 +1,14 @@
 #pragma once
 
 #include "av/foundation/math.hpp"
+#include "av/world/road_network.hpp"
+#include "av/world/traffic.hpp"
 #include <vector>
 #include <memory>
 
 namespace av {
 
-// Forward declarations
-class RoadNetwork;
-class TrafficVehicle;
-class Pedestrian;
-
-// Main world object
+// Main world object - orchestrates all entities
 class World {
 public:
     World();
@@ -20,72 +17,39 @@ public:
     // Initialize world
     void initialize();
 
-    // Update world
+    // Update world state
     void update(float deltaTime);
 
-    // Create and manage entities
+    // Road network access
     std::shared_ptr<RoadNetwork> getRoadNetwork();
+    const std::shared_ptr<RoadNetwork> getRoadNetwork() const;
 
-    // Traffic management
+    // Traffic vehicle management
     std::shared_ptr<TrafficVehicle> createTrafficVehicle();
     void removeTrafficVehicle(const std::shared_ptr<TrafficVehicle>& vehicle);
+    const std::vector<std::shared_ptr<TrafficVehicle>>& getTrafficVehicles() const;
+    size_t getTrafficVehicleCount() const;
 
     // Pedestrian management
     std::shared_ptr<Pedestrian> createPedestrian();
     void removePedestrian(const std::shared_ptr<Pedestrian>& pedestrian);
+    const std::vector<std::shared_ptr<Pedestrian>>& getPedestrians() const;
+    size_t getPedestrianCount() const;
 
     // Environment properties
-    void setTimeOfDay(float hour);  // 0-24
+    void setTimeOfDay(float hour);  // 0-24 hours
+    float getTimeOfDay() const;
+
     void setWeather(int weatherType); // 0: clear, 1: rain, 2: fog
+    int getWeather() const;
 
 private:
     std::shared_ptr<RoadNetwork> roadNetwork_;
     std::vector<std::shared_ptr<TrafficVehicle>> trafficVehicles_;
     std::vector<std::shared_ptr<Pedestrian>> pedestrians_;
-};
 
-// Road network representation
-class RoadNetwork {
-public:
-    RoadNetwork();
-    ~RoadNetwork();
-
-    // Load road network from file
-    void loadFromFile(const std::string& filePath);
-
-    // Road network queries
-    Vec3 getClosestLanePoint(const Vec3& position);
-
-private:
-    // Internal representation
-};
-
-// Traffic vehicle (AI-controlled)
-class TrafficVehicle {
-public:
-    TrafficVehicle();
-    ~TrafficVehicle();
-
-    void update(float deltaTime);
-    void setPosition(const Vec3& position);
-    Vec3 getPosition() const;
-
-private:
-    Vec3 position_ = Vec3::Zero();
-};
-
-// Pedestrian (AI-controlled)
-class Pedestrian {
-public:
-    Pedestrian();
-    ~Pedestrian();
-
-    void update(float deltaTime);
-    void setPosition(const Vec3& position);
-    Vec3 getPosition() const;
-
-private:
-    Vec3 position_ = Vec3::Zero();
+    float timeOfDay_ = 12.0f;  // noon
+    int weatherType_ = 0;       // clear
 };
 
 } // namespace av
