@@ -1,5 +1,6 @@
 #include "av/world/world.hpp"
 #include "av/world/road_network.hpp"
+#include "av/world/world_loader.hpp"
 #include "av/foundation/logging.hpp"
 #include <algorithm>
 
@@ -121,6 +122,19 @@ void World::setWeather(int weatherType) {
 
 int World::getWeather() const {
     return weatherType_;
+}
+
+bool World::loadFromJson(const std::string& filePath) {
+    // Note: Requires World to be managed by shared_ptr
+    // This is a limitation of the current design
+    AV_WARN("loadFromJson requires World to be managed by shared_ptr");
+    return false;
+    // Proper usage would be:
+    // return WorldLoader::loadWorld(filePath, shared_from_this());
+}
+
+bool World::saveToJson(const std::string& filePath) const {
+    return WorldLoader::saveRoadNetwork(filePath, roadNetwork_);
 }
 
 } // namespace av

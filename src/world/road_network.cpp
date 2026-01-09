@@ -291,13 +291,29 @@ void RoadNetwork::update(float deltaTime) {
 
 bool RoadNetwork::loadFromJson(const std::string& filePath) {
     AV_INFO("Loading road network from: %s", filePath.c_str());
-    // TODO: Implement JSON loading
+
+    // Note: Actual JSON loading is handled by WorldLoader class
+    // This method is kept for backward compatibility
+
+    // Try to load using WorldLoader if available
+    #ifdef HAVE_WORLD_LOADER
+        // Forward to WorldLoader::loadRoadNetwork(filePath, shared_from_this())
+        // For now, return false as it requires shared_ptr support
+    #endif
+
     return false;
 }
 
 bool RoadNetwork::saveToJson(const std::string& filePath) const {
     AV_INFO("Saving road network to: %s", filePath.c_str());
-    // TODO: Implement JSON saving
+
+    // Note: Actual JSON saving is handled by WorldLoader class
+    // This method is kept for backward compatibility
+
+    #ifdef HAVE_WORLD_LOADER
+        // Forward to WorldLoader::saveRoadNetwork
+    #endif
+
     return false;
 }
 

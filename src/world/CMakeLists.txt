@@ -2,6 +2,7 @@ add_library(av_world SHARED
     world.cpp
     road_network.cpp
     traffic.cpp
+    world_loader.cpp
 )
 
 target_include_directories(av_world PUBLIC

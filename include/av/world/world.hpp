@@ -43,6 +43,10 @@ public:
     void setWeather(int weatherType); // 0: clear, 1: rain, 2: fog
     int getWeather() const;
 
+    // File I/O
+    bool loadFromJson(const std::string& filePath);
+    bool saveToJson(const std::string& filePath) const;
+
 private:
     std::shared_ptr<RoadNetwork> roadNetwork_;
     std::vector<std::shared_ptr<TrafficVehicle>> trafficVehicles_;
