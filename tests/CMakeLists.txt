@@ -94,3 +94,22 @@ set_target_properties(test_camera PROPERTIES
 )
 
 add_test(NAME CameraTests COMMAND test_camera)
+
+# Phase 6 other sensors tests (Radar, GPS, IMU, Ultrasonic, Odometry)
+add_executable(test_phase6_sensors
+    sensors/test_phase6_sensors.cpp
+)
+
+target_link_libraries(test_phase6_sensors PRIVATE
+    av_foundation
+    av_physics
+    av_world
+    av_sensors
+)
+
+set_target_properties(test_phase6_sensors PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
+add_test(NAME Phase6SensorsTests COMMAND test_phase6_sensors)

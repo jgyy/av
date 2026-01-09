@@ -6,6 +6,8 @@ add_library(av_sensors SHARED
     radar.cpp
     imu.cpp
     gps.cpp
+    ultrasonic.cpp
+    odometry.cpp
     sensor_manager.cpp
 )
 

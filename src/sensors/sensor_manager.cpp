@@ -135,5 +135,71 @@ std::shared_ptr<LidarSensor> SensorManager::getLidarSensor(const std::string& na
     return std::dynamic_pointer_cast<LidarSensor>(sensor);
 }
 
+std::shared_ptr<CameraSensor> SensorManager::createCameraSensor(const CameraSensor::Config& config) {
+    auto camera = std::make_shared<CameraSensor>(config);
+    addSensor(camera);
+    AV_INFO("Created Camera sensor");
+    return camera;
+}
+
+std::shared_ptr<CameraSensor> SensorManager::getCameraSensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<CameraSensor>(getSensor(name));
+}
+
+std::shared_ptr<RadarSensor> SensorManager::createRadarSensor(const RadarSensor::Config& config) {
+    auto radar = std::make_shared<RadarSensor>(config);
+    addSensor(radar);
+    AV_INFO("Created Radar sensor");
+    return radar;
+}
+
+std::shared_ptr<RadarSensor> SensorManager::getRadarSensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<RadarSensor>(getSensor(name));
+}
+
+std::shared_ptr<GPSSensor> SensorManager::createGPSSensor(const GPSSensor::Config& config) {
+    auto gps = std::make_shared<GPSSensor>(config);
+    addSensor(gps);
+    AV_INFO("Created GPS sensor");
+    return gps;
+}
+
+std::shared_ptr<GPSSensor> SensorManager::getGPSSensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<GPSSensor>(getSensor(name));
+}
+
+std::shared_ptr<IMUSensor> SensorManager::createIMUSensor(const IMUSensor::Config& config) {
+    auto imu = std::make_shared<IMUSensor>(config);
+    addSensor(imu);
+    AV_INFO("Created IMU sensor");
+    return imu;
+}
+
+std::shared_ptr<IMUSensor> SensorManager::getIMUSensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<IMUSensor>(getSensor(name));
+}
+
+std::shared_ptr<UltrasonicSensor> SensorManager::createUltrasonicSensor(const UltrasonicSensor::Config& config) {
+    auto ultrasonic = std::make_shared<UltrasonicSensor>(config);
+    addSensor(ultrasonic);
+    AV_INFO("Created Ultrasonic sensor");
+    return ultrasonic;
+}
+
+std::shared_ptr<UltrasonicSensor> SensorManager::getUltrasonicSensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<UltrasonicSensor>(getSensor(name));
+}
+
+std::shared_ptr<OdometrySensor> SensorManager::createOdometrySensor(const OdometrySensor::Config& config) {
+    auto odometry = std::make_shared<OdometrySensor>(config);
+    addSensor(odometry);
+    AV_INFO("Created Odometry sensor");
+    return odometry;
+}
+
+std::shared_ptr<OdometrySensor> SensorManager::getOdometrySensor(const std::string& name) const {
+    return std::dynamic_pointer_cast<OdometrySensor>(getSensor(name));
+}
+
 } // namespace av
 
