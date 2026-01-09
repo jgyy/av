@@ -1,6 +1,7 @@
 add_library(av_sensors SHARED
     sensor.cpp
     lidar.cpp
+    lidar_visualizer.cpp
     camera.cpp
     radar.cpp
     imu.cpp
