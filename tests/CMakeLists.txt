@@ -38,3 +38,21 @@ target_link_libraries(test_rendering PRIVATE
 )
 
 add_test(NAME RenderingTests COMMAND test_rendering)
+
+# World tests (Phase 3)
+add_executable(test_world
+    world/test_world.cpp
+)
+
+target_link_libraries(test_world PRIVATE
+    av_foundation
+    av_physics
+    av_world
+)
+
+set_target_properties(test_world PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
+add_test(NAME WorldTests COMMAND test_world)
