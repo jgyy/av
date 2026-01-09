@@ -75,3 +75,22 @@ set_target_properties(test_lidar PROPERTIES
 )
 
 add_test(NAME LidarTests COMMAND test_lidar)
+
+# Camera sensor tests (Phase 5)
+add_executable(test_camera
+    sensors/test_camera.cpp
+)
+
+target_link_libraries(test_camera PRIVATE
+    av_foundation
+    av_physics
+    av_world
+    av_sensors
+)
+
+set_target_properties(test_camera PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
+add_test(NAME CameraTests COMMAND test_camera)
