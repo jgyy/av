@@ -3,7 +3,10 @@ add_library(av_rendering SHARED
     camera.cpp
     mesh.cpp
     shader.cpp
+    window.cpp
     debug_renderer.cpp
+    imgui_helper.cpp
+    scene.cpp
 )
 
 target_include_directories(av_rendering PUBLIC

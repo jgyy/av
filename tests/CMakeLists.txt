@@ -26,3 +26,15 @@ target_link_libraries(test_physics PRIVATE
 )
 
 add_test(NAME PhysicsTests COMMAND test_physics)
+
+# Rendering tests
+add_executable(test_rendering
+    rendering/test_rendering.cpp
+)
+
+target_link_libraries(test_rendering PRIVATE
+    av_rendering
+    GTest::gtest_main
+)
+
+add_test(NAME RenderingTests COMMAND test_rendering)
