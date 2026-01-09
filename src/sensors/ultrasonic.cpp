@@ -10,6 +10,9 @@ namespace av {
 
 static std::mt19937 ultrasonicRNG(std::random_device{}());
 
+UltrasonicSensor::UltrasonicSensor() : UltrasonicSensor(Config()) {
+}
+
 UltrasonicSensor::UltrasonicSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

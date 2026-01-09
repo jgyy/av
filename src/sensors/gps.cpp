@@ -8,6 +8,9 @@ namespace av {
 
 static std::mt19937 gpsRNG(std::random_device{}());
 
+GPSSensor::GPSSensor() : GPSSensor(Config()) {
+}
+
 GPSSensor::GPSSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

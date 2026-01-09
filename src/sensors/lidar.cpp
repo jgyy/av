@@ -14,6 +14,9 @@ static std::mt19937 g_rng(std::chrono::high_resolution_clock::now().time_since_e
 static std::uniform_real_distribution<float> g_uniform(0.0f, 1.0f);
 static std::normal_distribution<float> g_normal(0.0f, 1.0f);
 
+LidarSensor::LidarSensor() : LidarSensor(Config()) {
+}
+
 LidarSensor::LidarSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

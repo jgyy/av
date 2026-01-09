@@ -10,6 +10,9 @@ namespace av {
 
 static std::mt19937 radarRNG(std::random_device{}());
 
+RadarSensor::RadarSensor() : RadarSensor(Config()) {
+}
+
 RadarSensor::RadarSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

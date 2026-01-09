@@ -8,6 +8,9 @@ namespace av {
 
 static std::mt19937 imuRNG(std::random_device{}());
 
+IMUSensor::IMUSensor() : IMUSensor(Config()) {
+}
+
 IMUSensor::IMUSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

@@ -295,6 +295,54 @@ lidar.cpp.s:
 	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/lidar.cpp.s
 .PHONY : lidar.cpp.s
 
+lidar_visualizer.o: lidar_visualizer.cpp.o
+.PHONY : lidar_visualizer.o
+
+# target to build an object file
+lidar_visualizer.cpp.o:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o
+.PHONY : lidar_visualizer.cpp.o
+
+lidar_visualizer.i: lidar_visualizer.cpp.i
+.PHONY : lidar_visualizer.i
+
+# target to preprocess a source file
+lidar_visualizer.cpp.i:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.i
+.PHONY : lidar_visualizer.cpp.i
+
+lidar_visualizer.s: lidar_visualizer.cpp.s
+.PHONY : lidar_visualizer.s
+
+# target to generate assembly for a file
+lidar_visualizer.cpp.s:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.s
+.PHONY : lidar_visualizer.cpp.s
+
+odometry.o: odometry.cpp.o
+.PHONY : odometry.o
+
+# target to build an object file
+odometry.cpp.o:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o
+.PHONY : odometry.cpp.o
+
+odometry.i: odometry.cpp.i
+.PHONY : odometry.i
+
+# target to preprocess a source file
+odometry.cpp.i:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.i
+.PHONY : odometry.cpp.i
+
+odometry.s: odometry.cpp.s
+.PHONY : odometry.s
+
+# target to generate assembly for a file
+odometry.cpp.s:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.s
+.PHONY : odometry.cpp.s
+
 radar.o: radar.cpp.o
 .PHONY : radar.o
 
@@ -367,6 +415,30 @@ sensor_manager.cpp.s:
 	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.s
 .PHONY : sensor_manager.cpp.s
 
+ultrasonic.o: ultrasonic.cpp.o
+.PHONY : ultrasonic.o
+
+# target to build an object file
+ultrasonic.cpp.o:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o
+.PHONY : ultrasonic.cpp.o
+
+ultrasonic.i: ultrasonic.cpp.i
+.PHONY : ultrasonic.i
+
+# target to preprocess a source file
+ultrasonic.cpp.i:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.i
+.PHONY : ultrasonic.cpp.i
+
+ultrasonic.s: ultrasonic.cpp.s
+.PHONY : ultrasonic.s
+
+# target to generate assembly for a file
+ultrasonic.cpp.s:
+	cd /home/jegoh/Documents/repo/av/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/av_sensors.dir/build.make src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.s
+.PHONY : ultrasonic.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -395,6 +467,12 @@ help:
 	@echo "... lidar.o"
 	@echo "... lidar.i"
 	@echo "... lidar.s"
+	@echo "... lidar_visualizer.o"
+	@echo "... lidar_visualizer.i"
+	@echo "... lidar_visualizer.s"
+	@echo "... odometry.o"
+	@echo "... odometry.i"
+	@echo "... odometry.s"
 	@echo "... radar.o"
 	@echo "... radar.i"
 	@echo "... radar.s"
@@ -404,6 +482,9 @@ help:
 	@echo "... sensor_manager.o"
 	@echo "... sensor_manager.i"
 	@echo "... sensor_manager.s"
+	@echo "... ultrasonic.o"
+	@echo "... ultrasonic.i"
+	@echo "... ultrasonic.s"
 .PHONY : help
 
 

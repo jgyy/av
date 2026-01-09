@@ -39,7 +39,8 @@ public:
         bool enableDrift = true;       // Enable position drift over time
     };
 
-    GPSSensor(const Config& config = Config());
+    explicit GPSSensor(const Config& config);
+    GPSSensor();
     ~GPSSensor() = default;
 
     // Sensor interface

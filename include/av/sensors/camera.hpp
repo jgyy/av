@@ -69,7 +69,8 @@ public:
         Intrinsics intrinsics;
     };
 
-    CameraSensor(const Config& config = Config());
+    explicit CameraSensor(const Config& config);
+    CameraSensor();
     ~CameraSensor() = default;
 
     // Sensor interface

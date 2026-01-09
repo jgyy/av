@@ -32,7 +32,8 @@ public:
         bool enableAngularArrangement = true;  // Sensors arranged in circle
     };
 
-    UltrasonicSensor(const Config& config = Config());
+    explicit UltrasonicSensor(const Config& config);
+    UltrasonicSensor();
     ~UltrasonicSensor() = default;
 
     // Sensor interface

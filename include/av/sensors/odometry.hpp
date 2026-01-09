@@ -35,7 +35,8 @@ public:
         bool enableCalibrationError = true;  // Enable wheel radius calibration error
     };
 
-    OdometrySensor(const Config& config = Config());
+    explicit OdometrySensor(const Config& config);
+    OdometrySensor();
     ~OdometrySensor() = default;
 
     // Sensor interface

@@ -100,10 +100,24 @@ src/sensors/CMakeFiles/av_sensors.dir/lidar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/av_sensors.dir/lidar.cpp.s"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jegoh/Documents/repo/av/src/sensors/lidar.cpp -o CMakeFiles/av_sensors.dir/lidar.cpp.s
 
+src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
+src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/lidar_visualizer.cpp
+src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o -MF CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o.d -o CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/lidar_visualizer.cpp
+
+src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.i"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jegoh/Documents/repo/av/src/sensors/lidar_visualizer.cpp > CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.i
+
+src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.s"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jegoh/Documents/repo/av/src/sensors/lidar_visualizer.cpp -o CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.s
+
 src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/camera.cpp
 src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o -MF CMakeFiles/av_sensors.dir/camera.cpp.o.d -o CMakeFiles/av_sensors.dir/camera.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/camera.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.i: cmake_force
@@ -117,7 +131,7 @@ src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.s: cmake_force
 src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/radar.cpp
 src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o -MF CMakeFiles/av_sensors.dir/radar.cpp.o.d -o CMakeFiles/av_sensors.dir/radar.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/radar.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.i: cmake_force
@@ -131,7 +145,7 @@ src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.s: cmake_force
 src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/imu.cpp
 src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o -MF CMakeFiles/av_sensors.dir/imu.cpp.o.d -o CMakeFiles/av_sensors.dir/imu.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/imu.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.i: cmake_force
@@ -145,7 +159,7 @@ src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.s: cmake_force
 src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/gps.cpp
 src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o -MF CMakeFiles/av_sensors.dir/gps.cpp.o.d -o CMakeFiles/av_sensors.dir/gps.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/gps.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.i: cmake_force
@@ -156,10 +170,38 @@ src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/av_sensors.dir/gps.cpp.s"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jegoh/Documents/repo/av/src/sensors/gps.cpp -o CMakeFiles/av_sensors.dir/gps.cpp.s
 
+src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
+src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/ultrasonic.cpp
+src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o -MF CMakeFiles/av_sensors.dir/ultrasonic.cpp.o.d -o CMakeFiles/av_sensors.dir/ultrasonic.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/ultrasonic.cpp
+
+src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/av_sensors.dir/ultrasonic.cpp.i"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jegoh/Documents/repo/av/src/sensors/ultrasonic.cpp > CMakeFiles/av_sensors.dir/ultrasonic.cpp.i
+
+src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/av_sensors.dir/ultrasonic.cpp.s"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jegoh/Documents/repo/av/src/sensors/ultrasonic.cpp -o CMakeFiles/av_sensors.dir/ultrasonic.cpp.s
+
+src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
+src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/odometry.cpp
+src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o -MF CMakeFiles/av_sensors.dir/odometry.cpp.o.d -o CMakeFiles/av_sensors.dir/odometry.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/odometry.cpp
+
+src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/av_sensors.dir/odometry.cpp.i"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jegoh/Documents/repo/av/src/sensors/odometry.cpp > CMakeFiles/av_sensors.dir/odometry.cpp.i
+
+src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/av_sensors.dir/odometry.cpp.s"
+	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jegoh/Documents/repo/av/src/sensors/odometry.cpp -o CMakeFiles/av_sensors.dir/odometry.cpp.s
+
 src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o: /home/jegoh/Documents/repo/av/src/sensors/sensor_manager.cpp
 src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o -MF CMakeFiles/av_sensors.dir/sensor_manager.cpp.o.d -o CMakeFiles/av_sensors.dir/sensor_manager.cpp.o -c /home/jegoh/Documents/repo/av/src/sensors/sensor_manager.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.i: cmake_force
@@ -173,7 +215,7 @@ src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.s: cmake_force
 src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/flags.make
 src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o: /home/jegoh/Documents/repo/av/src/foundation/logging.cpp
 src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o -MF CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o.d -o CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o -c /home/jegoh/Documents/repo/av/src/foundation/logging.cpp
 
 src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.i: cmake_force
@@ -188,10 +230,13 @@ src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.s: cmake_force
 av_sensors_OBJECTS = \
 "CMakeFiles/av_sensors.dir/sensor.cpp.o" \
 "CMakeFiles/av_sensors.dir/lidar.cpp.o" \
+"CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o" \
 "CMakeFiles/av_sensors.dir/camera.cpp.o" \
 "CMakeFiles/av_sensors.dir/radar.cpp.o" \
 "CMakeFiles/av_sensors.dir/imu.cpp.o" \
 "CMakeFiles/av_sensors.dir/gps.cpp.o" \
+"CMakeFiles/av_sensors.dir/ultrasonic.cpp.o" \
+"CMakeFiles/av_sensors.dir/odometry.cpp.o" \
 "CMakeFiles/av_sensors.dir/sensor_manager.cpp.o" \
 "CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o"
 
@@ -200,16 +245,19 @@ av_sensors_EXTERNAL_OBJECTS =
 
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/sensor.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/lidar.cpp.o
+src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/camera.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o
+src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o
+src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/__/foundation/logging.cpp.o
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/build.make
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/compiler_depend.ts
 src/sensors/libav_sensors.so: src/sensors/CMakeFiles/av_sensors.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX shared library libav_sensors.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jegoh/Documents/repo/av/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library libav_sensors.so"
 	cd /home/jegoh/Documents/repo/av/build/src/sensors && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/av_sensors.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

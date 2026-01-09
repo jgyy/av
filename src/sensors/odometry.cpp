@@ -8,6 +8,9 @@ namespace av {
 
 static std::mt19937 odometryRNG(std::random_device{}());
 
+OdometrySensor::OdometrySensor() : OdometrySensor(Config()) {
+}
+
 OdometrySensor::OdometrySensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);

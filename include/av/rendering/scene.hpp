@@ -1,6 +1,7 @@
 #pragma once
 
 #include "av/foundation/math.hpp"
+#include "av/foundation/transform.hpp"
 #include "av/rendering/renderer.hpp"
 #include "av/rendering/mesh.hpp"
 #include "av/rendering/debug_renderer.hpp"

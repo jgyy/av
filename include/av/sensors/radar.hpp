@@ -42,7 +42,8 @@ public:
         bool enableClutterNoise = true;     // Enable ground clutter simulation
     };
 
-    RadarSensor(const Config& config = Config());
+    explicit RadarSensor(const Config& config);
+    RadarSensor();
     ~RadarSensor() = default;
 
     // Sensor interface

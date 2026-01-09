@@ -43,7 +43,8 @@ public:
         float outlierDistance = 50.0f;     // Outlier distance (meters)
     };
 
-    LidarSensor(const Config& config = Config());
+    explicit LidarSensor(const Config& config);
+    LidarSensor();
     ~LidarSensor() = default;
 
     // Sensor interface

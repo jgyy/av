@@ -40,7 +40,8 @@ public:
         bool compensateGravity = true;       // Subtract gravity from acceleration
     };
 
-    IMUSensor(const Config& config = Config());
+    explicit IMUSensor(const Config& config);
+    IMUSensor();
     ~IMUSensor() = default;
 
     // Sensor interface

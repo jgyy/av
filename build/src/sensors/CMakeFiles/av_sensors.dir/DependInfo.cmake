@@ -13,9 +13,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jegoh/Documents/repo/av/src/sensors/gps.cpp" "src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/gps.cpp.o.d"
   "/home/jegoh/Documents/repo/av/src/sensors/imu.cpp" "src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/imu.cpp.o.d"
   "/home/jegoh/Documents/repo/av/src/sensors/lidar.cpp" "src/sensors/CMakeFiles/av_sensors.dir/lidar.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/lidar.cpp.o.d"
+  "/home/jegoh/Documents/repo/av/src/sensors/lidar_visualizer.cpp" "src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/lidar_visualizer.cpp.o.d"
+  "/home/jegoh/Documents/repo/av/src/sensors/odometry.cpp" "src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/odometry.cpp.o.d"
   "/home/jegoh/Documents/repo/av/src/sensors/radar.cpp" "src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/radar.cpp.o.d"
   "/home/jegoh/Documents/repo/av/src/sensors/sensor.cpp" "src/sensors/CMakeFiles/av_sensors.dir/sensor.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/sensor.cpp.o.d"
   "/home/jegoh/Documents/repo/av/src/sensors/sensor_manager.cpp" "src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/sensor_manager.cpp.o.d"
+  "/home/jegoh/Documents/repo/av/src/sensors/ultrasonic.cpp" "src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/ultrasonic.cpp.o.d"
   "" "src/sensors/libav_sensors.so" "gcc" "src/sensors/CMakeFiles/av_sensors.dir/link.d"
   )
 

@@ -8,6 +8,9 @@
 
 namespace av {
 
+CameraSensor::CameraSensor() : CameraSensor(Config()) {
+}
+
 CameraSensor::CameraSensor(const Config& config)
     : config_(config) {
     setStatus(Status::UNINITIALIZED);
