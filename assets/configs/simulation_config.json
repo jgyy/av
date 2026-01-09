@@ -1,0 +1,68 @@
+{
+  "simulation": {
+    "timestep": 0.01,
+    "max_substeps": 10,
+    "target_fps": 60,
+    "gravity": [0, -9.81, 0]
+  },
+  "vehicle": {
+    "mass": 1500,
+    "wheelbase": 2.7,
+    "track_width": 1.6,
+    "max_steering_angle": 30,
+    "max_acceleration": 5.0,
+    "max_braking": -10.0,
+    "max_speed": 50.0,
+    "drag_coefficient": 0.3,
+    "friction_coefficient": 0.8
+  },
+  "sensors": {
+    "lidar": {
+      "vertical_channels": 64,
+      "horizontal_resolution": 0.4,
+      "max_range": 120.0,
+      "min_range": 0.5,
+      "update_rate": 10.0
+    },
+    "camera": {
+      "width": 1920,
+      "height": 1080,
+      "fov_degrees": 60,
+      "update_rate": 30.0
+    },
+    "radar": {
+      "max_range": 200.0,
+      "update_rate": 10.0,
+      "azimuth_resolution": 1.0
+    },
+    "imu": {
+      "update_rate": 100.0
+    },
+    "gps": {
+      "update_rate": 1.0,
+      "accuracy": 2.0
+    }
+  },
+  "perception": {
+    "object_detection_enabled": true,
+    "object_tracking_enabled": true,
+    "lane_detection_enabled": true,
+    "sensor_fusion_enabled": true
+  },
+  "planning": {
+    "global_planner_type": "astar",
+    "local_planner_type": "frenet",
+    "behavior_planner_type": "fsm"
+  },
+  "control": {
+    "lateral_controller": "pure_pursuit",
+    "longitudinal_controller": "pid",
+    "update_rate": 100.0
+  },
+  "rendering": {
+    "width": 1280,
+    "height": 720,
+    "vsync": true,
+    "debug_ui_enabled": true
+  }
+}

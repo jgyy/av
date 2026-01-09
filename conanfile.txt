@@ -1,0 +1,13 @@
+[requires]
+bullet/3.25@conan/stable
+glfw/3.4@conan/stable
+glew/2.2.0@conan/stable
+eigen/3.4.0@conan/stable
+spdlog/1.14.1@conan/stable
+nlohmann_json/3.11.3@conan/stable
+opengl/system
+gtest/1.14.0@conan/stable
+
+[generators]
+cmake_find_package
+cmake_paths
